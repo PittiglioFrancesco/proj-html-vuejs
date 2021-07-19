@@ -9,16 +9,23 @@
     <div class="row bgc-black0-5">
         <nav class="self-container">
             <ul class="d-flex align-items-center">
-                <li><a href="#"><img src="../assets/avada-drivers-logo-2x.png" alt=""></a></li>
+                <li><img src="../assets/avada-drivers-logo-2x.png" alt=""></li>
                 <li><a href="#">home</a></li>
                 <li><a href="#">about</a></li>
                 <li><a href="#">prices</a></li>
-                <li><a href="#">courses<span class="new">new</span></a></li>
+                <li><a class="d-flex" href="#">courses<span class="new align-self-center">new</span></a></li>
                 <li><a href="#">locations</a></li>
                 <li><a href="#">blog</a></li>
                 <li><a href="#"><span class="rounded-pill">book now</span></a></li>
             </ul>
         </nav>
+    </div>
+
+    <div class="row jumbotron self-container">
+
+        <h1>Drive with Avada</h1>
+        <h3>We offer the finest driving tuition money can buy</h3>
+
     </div>
 
   </div>
@@ -33,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 
 .self-container{
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 // Header prima parte
@@ -55,8 +62,8 @@ div{
 // navbar
 .bgc-black0-5{
     background-color: rgba(0, 0, 0, 0.5);
-    // position: absolute;
-    // width: 100%;
+    position: absolute;
+    width: 100%;
 }
 
 ul{
@@ -72,19 +79,21 @@ li{
 a{
     text-decoration: none;
     color: white;
-    margin-right: 50px;
+    margin-right: 30px;
     text-transform: uppercase;
     :hover{
         text-decoration: none;
+        color: white;
+        border-bottom: 3px solid #85b680;
     }
 }
 
-li a img{
-    margin-right: 100px;
+li img{
+    width: 75%;
 }
 
 .rounded-pill{
-    background-color: #79b27b;
+    background-color: #85b680;
     padding: 5px 10px;
 }
 
@@ -92,10 +101,30 @@ li a img{
     background-color: #79b27b;
     padding: 1px 2px;
     font-size: 10px;
+    height: 15px;
 }
 
 // sistemare il colore di new e del bottone, 
-// allineare il new con courses,
 // fontawesome non funziona
+
+// jumbotron
+
+.jumbotron{
+    background-image: url("../assets/homepage-hero-background.jpg");
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1{
+    margin-top: 250px;
+    color: white;
+}
+
+h3{
+    margin-bottom: 150px;
+    color: white;
+}
 
 </style>
