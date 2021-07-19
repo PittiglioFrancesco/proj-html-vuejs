@@ -2,7 +2,7 @@
   <div>
 
     <!-- behind the wheel -->
-    <div class="row self-container">
+    <div class="row self-container behind-wheel">
         <div class="col-6">
             <h2>Get Behind The Wheel</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</p>
@@ -26,7 +26,18 @@
     </div>
 
     <!-- learn to drive -->
-    <div class="row self-container">
+    <div class="row drive-learn">
+
+        <div class="row align-items-center">
+            <div class="col-6 left">
+                <h2>Start Learning to Drive Today</h2>
+                <h4>Give us a call to schedule your first driving lesson</h4>
+            </div>
+            <div class="col-6 right">
+                <i class="fas fa-phone-alt"></i>
+                <span class="number">1-800-555-555</span>
+            </div>
+        </div>
 
     </div>
 
@@ -44,59 +55,85 @@ export default {
 .self-container{
     padding: 0 5%;
 }
-
-.col-6
-
-.card{
-    background-color: whitesmoke;
-    padding: 40px 20px;
-    position: absolute;
-    top: 500px;
-    h2{
-    color: #79b27b;
-    }
-    p{
-    max-width: 500px;
-    color: gray;
-    line-height: 2;
-    }
-    form{
-        input{
-        background-color: #F7F7F7;
-        border: 1px solid lightgray;
-        border-radius: 5px;
-        width: 100%;
-        margin-bottom: 30px;
-        padding: 10px 5px;
+.behind-wheel{
+    height: 700px;
+    .col-6{
+        h2{
+        color: #79b27b;
+        margin: 40px 0;
         }
 
-        div{
-            .button-form{
-            background-color: #79b27b;
-            color: #fff;
-            border: 0px;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-transform: uppercase;
+        p{
+            max-width: 500px;
+            color: gray;
+            line-height: 2;
+        }
+
+        span{
+            line-height: 2;
+            color: gray;
+        }
+    }
+
+    .card{
+        background-color: whitesmoke;
+        padding: 40px 20px;
+        position: absolute;
+        top: 500px;
+
+        h2{
+        color: #79b27b;
+        }
+
+        p{
+        max-width: 500px;
+        color: gray;
+        line-height: 2;
+        }
+
+        form{
+
+            input{
+            background-color: #F7F7F7;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 10px 5px;
+            }
+
+            div{
+                .button-form{
+                background-color: #79b27b;
+                color: #fff;
+                border: 0px;
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-transform: uppercase;
+                }
             }
         }
     }
 }
 
-h2{
-    color: #79b27b;
-    margin: 40px 0;
-}
+.drive-learn{
+    padding: 50px 5%;
+    background-image: url("../assets/horizontal-cta-background.jpg");
+    background-size: cover;
+    .left{
 
-p{
-    max-width: 500px;
-    color: gray;
-    line-height: 2;
-}
+        h2, h4{
+            color: #fff;
+        }
+    }
+    .right{
 
-span{
-    line-height: 2;
-    color: gray;
+        .number{
+            font-size: 25px;
+            text-align: right;
+            color: #fff;
+        }
+    }
 }
 
 </style>
