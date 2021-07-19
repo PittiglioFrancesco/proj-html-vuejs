@@ -4,13 +4,13 @@
     <!-- behind the wheel -->
     <div class="row self-container">
         <div class="col-6">
-            <h1>Get Behind The Wheel</h1>
+            <h2>Get Behind The Wheel</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</p>
             <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper. Fusce et ultrices libero, at suscipit lacus. Sed vitae fringilla nibh. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper. Fusce et ultrices libero, at suscipit lacus. Sed vitae fringilla nibh.</span>
         </div>
         <div class="col-6">
             <div class="card">
-                <h1 class="text-center">First Lesson Free!</h1>
+                <h2 class="text-center">First Lesson Free!</h2>
                 <p class="text-center">When you make a block booking with us your first lesson is included free.</p>
                 <form action="">
                     <input class="d-block" type="text" placeholder="Your Name*">
@@ -25,7 +25,10 @@
         </div>
     </div>
 
-    
+    <!-- learn to drive -->
+    <div class="row self-container">
+
+    </div>
 
   </div>
 </template>
@@ -36,44 +39,64 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 .self-container{
     padding: 0 5%;
 }
+
+.col-6
 
 .card{
     background-color: whitesmoke;
     padding: 40px 20px;
     position: absolute;
     top: 500px;
+    h2{
+    color: #79b27b;
+    }
+    p{
+    max-width: 500px;
+    color: gray;
+    line-height: 2;
+    }
+    form{
+        input{
+        background-color: #F7F7F7;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 10px 5px;
+        }
+
+        div{
+            .button-form{
+            background-color: #79b27b;
+            color: #fff;
+            border: 0px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            }
+        }
+    }
 }
 
-h1{
+h2{
     color: #79b27b;
+    margin: 40px 0;
 }
 
 p{
     max-width: 500px;
     color: gray;
+    line-height: 2;
 }
 
-input{
-    background-color: #F7F7F7;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 30px;
-    padding: 10px 5px;
-}
-
-.button-form{
-    background-color: #79b27b;
-    color: #fff;
-    border: 0px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-transform: uppercase;
+span{
+    line-height: 2;
+    color: gray;
 }
 
 </style>
