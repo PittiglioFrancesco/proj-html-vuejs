@@ -112,6 +112,36 @@
     <!-- sistemare il numero  -->
     </div>
 
+    <div class="row instructor-card">
+        <div class="col">
+            <div class="card d-flex justify-content-center">
+                <img src="../assets/instructor-mikehart.jpg" alt="mikehart" class="my-3">
+                <h3 class="text-center">Mike Hart</h3>
+                <i></i><i></i><i></i>
+                <span class="text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
+            </div>
+        </div>
+
+        <div class="col john">
+            <div class="card d-flex justify-content-center">
+                <img src="../assets/instructor-johnsmith.jpg" alt="johnsmith" class="my-3">
+                <h3 class="text-center">John Smith</h3>
+                <i></i><i></i><i></i>
+                <span class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <img src="../assets/instructor-angelahart.jpg" alt="angelahart" class="my-3">
+                <h3 class="text-center">Angela Hart</h3>
+                <i></i><i></i><i></i>
+                <span class="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
+            </div>
+        </div>
+
+    </div>
+
   </div>
 </template>
 
@@ -319,6 +349,22 @@ export default {
             padding: 10px 100px;
             color: white;
             border-radius: 30px;
+        }
+    }
+}
+
+.instructor-card{
+    padding: 0 5%;
+    .col{
+        .card{
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top: 5px solid #79b27b;
+            padding: 30px 30px 60px;
+            img{
+                width: 90%;
+                margin-left: 20px;
+            }
         }
     }
 }
