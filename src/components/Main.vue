@@ -142,6 +142,47 @@
 
     </div>
 
+    <div class="row justify-content-center testimonial">
+        <h2 class="text-center">Testimonials</h2>
+        <p class="text-center">Here’s what our happy drivers had to say about our services: </p>
+        <img src="../assets/testimonial-harold.png" alt="testimonial">
+        <p class="text-center">Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.</p>
+        <span class="bold text-center">Harold Green</span>
+    </div>
+
+    <div class="row news">
+        <div class="contenitore">
+            <div class="row"><h2 class="text-center">Latest News</h2></div>
+            <div class="row">
+                <div class="col-6">
+                <img src="../assets/blogpost-10and2-700x441.jpg" alt="news">
+                <h3 class="text center">What Car to Start With?</h3>
+                <h6 class="text center">February 7th, 2019 | <span>0 Comments</span></h6>
+                <span class="text center">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+            </div>
+            <div class="col-6">
+                <img src="../assets/blog-choosecar-700x441.jpg" alt="news">
+                <h3 class="text center">What Car to Start With?</h3>
+                <h6 class="text center">February 7th, 2019 | <span>0 Comments</span></h6>
+                <span class="text center">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+            </div>
+            </div>
+            <div class="row"><div class="button-news"><button class="text-uppercase">more from the blog</button></div></div>
+        </div>
+        <img src="../assets/latestnews-bottom.png" alt="bottom">
+    </div>
+
+    <div class="newsletter row">
+        <h2 class="text-center">Sign up to our Newsletter</h2>
+        <form action="">
+            <input type="text" placeholder="">
+            <div class="d-flex justify-content-center"><button class="text-uppercase">subscribe</button></div>
+            <p class="text-center">(We do not share your data with anybody, and only use it for its intended purpose)</p>
+        </form>
+    </div>
+
+    
+
   </div>
 </template>
 
@@ -361,10 +402,89 @@ export default {
             border-top-right-radius: 20px;
             border-top: 5px solid #79b27b;
             padding: 30px 30px 60px;
+            bottom: -50px;
             img{
                 width: 90%;
                 margin-left: 20px;
             }
+        }
+    }
+}
+
+.testimonial{
+    position: relative;
+    padding: 10% 20%;
+    background-image: url(../assets/testimonial-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    img{
+        width: 30%;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+}
+
+.news{
+    padding: 0 5% 5%;
+    background-image: url(../assets/latestnews-background.jpg);
+    .contenitore{
+        padding: 50px 100px;
+        background-color: #fff;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-top: 5px solid green;
+        .col-6{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+        .button-news{
+            display: flex;
+            justify-content: center;
+            button{
+                margin-top: 50px;
+                border-radius: 30px;
+                padding: 10px 20px;
+                border: 0;
+                background-color: green;
+                color: #fff;
+            }
+        }
+    }
+    img{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.newsletter{
+    padding: 0 20%;
+    background-image: url(../assets/newsletter_background.jpg);
+    background-size: cover;
+    h2{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    form{
+        input{
+            height: 40px;
+            width: 100%;
+            border: 1px solid gray;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        button{
+            border: 0px;
+            color: white;
+            background-color: green;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 50px;
         }
     }
 }
