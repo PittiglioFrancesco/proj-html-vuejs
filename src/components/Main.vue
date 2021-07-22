@@ -82,15 +82,15 @@
 
         <div class="col-4">
             <div class="card d-flex justify-content-center">
-                <div class="circle d-flex justify-content-center align-items-center"><span>95%</span></div>
-                <span class="text-center text-uppercase">pass rate</span>
+                <div class="circle d-flex justify-content-center align-items-center"><span>100%</span></div>
+                <span class="text-center text-uppercase">referral rate</span>
             </div>
         </div>
 
         <div class="col-4">
             <div class="card d-flex justify-content-center">
-                <div class="circle d-flex justify-content-center align-items-center"><span>95%</span></div>
-                <span class="text-center text-uppercase">pass rate</span>
+                <div class="circle d-flex justify-content-center align-items-center"><span>0%</span></div>
+                <span class="text-center text-uppercase">accident rate</span>
             </div>
         </div>
 
@@ -400,6 +400,7 @@ export default {
                 border: 10px solid gray;
                 border-radius: 50%;
                 margin: 0 36% 30px;
+                color: gray;
             }
         }
     }
