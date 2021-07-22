@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="main">
     <Header/>
     <Main/>
     <Footer/>
@@ -29,5 +29,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.main{
+  max-width: 100%;
+  overflow: hidden;
 }
 </style>

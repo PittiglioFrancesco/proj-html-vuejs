@@ -5,3 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+    :hover{
+        text-decoration: none;
+        color: none;
+    }
+}
+
+.hover{
+    cursor: pointer;
+}

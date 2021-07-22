@@ -34,8 +34,7 @@
                 <h4>Give us a call to schedule your first driving lesson</h4>
             </div>
             <div class="col-6 right">
-                <i class="fas fa-phone-alt"></i>
-                <span class="number">1-800-555-555</span>
+                <span class="number"><i class="fas fa-phone-alt"></i>1-800-555-555</span>
             </div>
         </div>
     <!-- sistemare il numero  -->
@@ -44,7 +43,7 @@
     <div class="row corsi">
         <div class="col-6 left">
             <div class="card">
-                <div class="triangle"><span class="text-uppercase">new</span></div>
+                <img src="../assets/new-corner.jpg" alt="triangle">
                 <h2 class="text-center">Courses</h2>
                 <span class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</span>
                 <div class="d-flex justify-content-center"><button class="text-uppercase">course information</button></div>
@@ -53,20 +52,20 @@
         <div class="col-6 right">
             <div class="row">
                 <div class="col-4">
-                    <img src="../assets/course-intensive-200x200.jpg" alt="">
+                    <img src="../assets/courses-passplus-200x200.jpg" alt="">
                     <h4 class="text-center">Pass Plus</h4>
                     <div class="d-flex justify-content-center"><button class="corso-button">learn more</button></div>
                 </div>
 
                 <div class="col-4">
                     <img src="../assets/course-intensive-200x200.jpg" alt="">
-                    <h4 class="text-center">Pass Plus</h4>
+                    <h4 class="text-center">Intensive Course</h4>
                     <div class="d-flex justify-content-center"><button class="corso-button">learn more</button></div>
                 </div>
 
                 <div class="col-4">
-                    <img src="../assets/course-intensive-200x200.jpg" alt="">
-                    <h4 class="text-center">Pass Plus</h4>
+                    <img src="../assets/courses-instructor-200x200.jpg" alt="">
+                    <h4 class="text-center">Instructors</h4>
                     <div class="d-flex justify-content-center"><button class="corso-button">learn more</button></div>
                 </div>
             </div>
@@ -105,7 +104,6 @@
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</h4>
             </div>
             <div class="col-4 right">
-                <i class="fas fa-phone-alt"></i>
                 <span class="button text-uppercase text-center">more about us</span>
             </div>
         </div>
@@ -145,9 +143,14 @@
     <div class="row justify-content-center testimonial">
         <h2 class="text-center">Testimonials</h2>
         <p class="text-center">Here’s what our happy drivers had to say about our services: </p>
-        <img src="../assets/testimonial-harold.png" alt="testimonial">
+        <img src="../assets/testimonial-kelly.png" alt="testimonial">
         <p class="text-center">Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.</p>
-        <span class="bold text-center">Harold Green</span>
+        <span class="bold text-center">{{ array[index].nome }}</span>
+        <span class="circle" @click="carousel(0)"></span>
+        <span class="circle" @click="carousel(1)"></span>
+        <span class="circle" @click="carousel(2)"></span>
+        <span class="circle" @click="carousel(3)"></span>
+        <span class="circle" @click="carousel(4)"></span>
     </div>
 
     <div class="row news">
@@ -156,15 +159,15 @@
             <div class="row">
                 <div class="col-6">
                 <img src="../assets/blogpost-10and2-700x441.jpg" alt="news">
-                <h3 class="text center">What Car to Start With?</h3>
-                <h6 class="text center">February 7th, 2019 | <span>0 Comments</span></h6>
-                <span class="text center">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                <h3 class="text-center">What Car to Start With?</h3>
+                <h6 class="text-center">February 7th, 2019 | <span>0 Comments</span></h6>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
             </div>
             <div class="col-6">
                 <img src="../assets/blog-choosecar-700x441.jpg" alt="news">
-                <h3 class="text center">What Car to Start With?</h3>
-                <h6 class="text center">February 7th, 2019 | <span>0 Comments</span></h6>
-                <span class="text center">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                <h3 class="text-center">What Car to Start With?</h3>
+                <h6 class="text-center">February 7th, 2019 | <span>0 Comments</span></h6>
+                <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
             </div>
             </div>
             <div class="row"><div class="button-news"><button class="text-uppercase">more from the blog</button></div></div>
@@ -188,6 +191,38 @@
 
 <script>
 export default {
+    data(){
+        return{
+            index: 0,
+            array: [
+            {
+                img: "testimonial-grant.png",
+                nome: "Grant Harvey"
+            },
+            {
+                img: "testimonial-harold.png",
+                nome: "Harold Green"
+            },
+            {
+                img: "testimonial-kate.png",
+                nome: "Kate Lewis"
+            },
+            {
+                img: "testimonial-kelly.png",
+                nome: "Kelly Johnson"
+            },
+            {
+                img: "testimonial-sophia.png",
+                nome: "Sophia Jones"
+            }
+            ]
+        }
+    },
+    methods: {
+        carousel(number){
+            this.index = number;
+        }
+    }
 
 }
 </script>
@@ -223,6 +258,7 @@ export default {
         padding: 40px 20px;
         position: absolute;
         top: 500px;
+        box-shadow: 10px 10px 10px 5px rgba($color: #000000, $alpha: 0.1);
 
         h2{
         color: #79b27b;
@@ -272,9 +308,13 @@ export default {
     .right{
 
         .number{
+            padding-left: 50%;
             font-size: 25px;
             text-align: right;
             color: #fff;
+            i{
+                margin-right: 20px;
+            }
         }
     }
 }
@@ -291,23 +331,10 @@ export default {
             position: absolute;
             top: 1400px;
             width: 500px;
+            box-shadow: 10px 10px 10px 5px rgba($color: #000000, $alpha: 0.1);
             // padding: 80px 40px;
-            .triangle{
-                top: 0px;
-                left: 0px;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 120px 120px 0 0;
-                border-color: #79b27b transparent transparent transparent;
-                span{
-                    position: absolute;
-                    top: 95px;
-                    color: white;
-                    padding-left: 20px;
-                    font-weight: bold;
-                    transform: rotate(-45deg);
-                }
+            img{
+                width: 30%;
             }
 
             h2{
@@ -348,6 +375,7 @@ export default {
                         background-color: #fff;
                         padding: 10px 20px;
                         text-transform: uppercase;
+                        color: #90ABBC;
                     }
                 }
             }
@@ -365,11 +393,13 @@ export default {
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             border-top: 5px solid #79b27b;
+            box-shadow: 10px 10px 10px 5px rgba($color: #000000, $alpha: 0.1);
             .circle{
                 width: 100px;
                 height: 100px;
                 border: 10px solid gray;
                 border-radius: 50%;
+                margin: 0 36% 30px;
             }
         }
     }
@@ -400,9 +430,12 @@ export default {
         .card{
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             border-top: 5px solid #79b27b;
             padding: 30px 30px 60px;
             bottom: -50px;
+            box-shadow: 10px 10px 10px 5px rgba($color: #000000, $alpha: 0.1);
             img{
                 width: 90%;
                 margin-left: 20px;
@@ -412,16 +445,27 @@ export default {
 }
 
 .testimonial{
-    position: relative;
     padding: 10% 20%;
     background-image: url(../assets/testimonial-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: gray;
     img{
         width: 30%;
         border-radius: 50%;
         margin-bottom: 50px;
         margin-top: 10px;
+    }
+    .bold{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .circle{
+        width: 1px;
+        padding: 5px 5px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        margin: 10px 5px;
     }
 }
 
@@ -433,7 +477,7 @@ export default {
         background-color: #fff;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        border-top: 5px solid green;
+        border-top: 5px solid #79b27b;
         .col-6{
             width: 50%;
             img{
@@ -448,7 +492,7 @@ export default {
                 border-radius: 30px;
                 padding: 10px 20px;
                 border: 0;
-                background-color: green;
+                background-color: #79b27b;
                 color: #fff;
             }
         }
@@ -478,7 +522,7 @@ export default {
         button{
             border: 0px;
             color: white;
-            background-color: green;
+            background-color: #79b27b;
             border-radius: 30px;
             padding: 10px 20px;
             margin-bottom: 20px;

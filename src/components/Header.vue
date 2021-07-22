@@ -3,7 +3,7 @@
 
     <div class="row justify-content-between align-items-center line1 self-container">
         <div class="col"><span>We have a 95% Successful Pass Rate</span></div>
-        <div class="left-text col"><i class="fas fa-phone-alt"></i><span>Give us a call to book your tuition! 1-800-555-555</span></div>
+        <div class="left-text col"><i class="fas fa-phone-alt phone-icon"></i><span>Give us a call to book your tuition! 1-800-555-555</span></div>
     </div>
 
     <div class="row bgc-black0-5">
@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 
+
 .self-container{
     padding: 0 5%;
 }
@@ -57,6 +58,10 @@ div{
 
 .left-text{
     text-align: right;
+}
+
+.phone-icon{
+    margin-right: 10px;
 }
 
 // navbar
@@ -103,6 +108,7 @@ li img{
     font-size: 10px;
     height: 15px;
 }
+
 
 // sistemare il colore di new e del bottone, 
 // fontawesome non funziona
